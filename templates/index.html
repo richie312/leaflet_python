@@ -43,6 +43,15 @@ input[type=submit]:hover {
   <form action="http://127.0.0.1:5002/get_map" method="post">
     <label for="fname">Enter the Postcode Area Key to get the sample distribution</label>
     <input type="text" id="Area_Key" name="Area_Key" placeholder="AB">
+    <select name="list_status">
+
+        {% for each in key_list_ %}
+
+        <option value="{{each}}">{{each}}</option>
+
+        {% endfor %}
+
+    </select>
     <input type="reset" value="Reset">
     <input type="submit" value="submit">
     </form>
